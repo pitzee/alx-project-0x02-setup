@@ -1,4 +1,5 @@
 import Card from "@/components/common/Card";
+import PostModal from "@/components/common/PostModal";
 import React from "react";
 
 const home = () => {
@@ -9,6 +10,7 @@ const home = () => {
         title="Welcome to the Home Page"
         content="This is a simple card component displaying some content."
       />
+      <PostModal />
     </div>
   );
 };
