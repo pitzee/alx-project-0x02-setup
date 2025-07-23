@@ -14,7 +14,7 @@ const Posts: React.FC<PostsPageProps> = ({ posts }) => {
       <h1 className="text-2xl font-bold mb-4">Posts</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.map((post) => (
-          <PostCard key={post.id} {...post} />
+          <PostCard key={post.userId} {...post} />
         ))}
       </div>
     </div>
