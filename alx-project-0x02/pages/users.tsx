@@ -14,14 +14,14 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
       <h1 className="text-2xl font-bold mb-4">Users</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {users.map((user) => (
-          <UserCard key={user.email} {...user} />
+          <UserCard key={user.id} {...user} />
         ))}
       </div>
     </div>
   );
 };
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
 
@@ -30,6 +30,6 @@ export const getStaticProps = async () => {
       users: data,
     },
   };
-};
+}
 
 export default Users;
